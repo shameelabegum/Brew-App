@@ -1,6 +1,6 @@
 
-from logic import drinkslist 
-from logic import peoplelist
+from core.logic import drinkslist 
+from core.logic import peoplelist
 
 
 

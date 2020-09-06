@@ -1,6 +1,6 @@
 import unittest
 
-from classes import Drinks
+from core.classes import Drinks
 
 expecteddrinkname = 'Fanta'
 expectedcolour = 'Orange'
@@ -18,7 +18,7 @@ if __name__ == '__main__':
     
 
     
-from classes import Person
+from core.classes import Person
 expectedfirstname = 'John'
 expectedsurname = 'Blah'
 expectedage = '23'     
@@ -34,7 +34,7 @@ if __name__ == '__main__':
     
     
     
-from classes import Order
+from core.classes import Order
 
 expectedpersonname = 'Sasha'
 expdrink = 'Orange'   
@@ -50,7 +50,7 @@ if __name__ == '__main__':
     unittest.main()
 
 
-from classes import Preferences
+from core.classes import Preferences
 
 expname = 'Sarah'
 expecteddrinkpref = 'Lemonade'   

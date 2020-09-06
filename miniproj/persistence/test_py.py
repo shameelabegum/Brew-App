@@ -1,6 +1,6 @@
 
 import pytest
-from classes import Drinks
+from core.classes import Drinks
 
 expecteddrinkname = 'Fanta'
 expectedcolour = 'Orange'
@@ -16,7 +16,7 @@ drink = Drinks('Fanta', 'Orange', 'Fizzy')
 
 
 
-from classes import Person
+from core.classes import Person
 
 expectedfirstname = 'John'
 expectedsurname = 'Blah'
@@ -31,7 +31,7 @@ person = Person('John', 'Blah', '23')
 
     
     
-from classes import Order
+from core.classes import Order
 
 expectedpersonname = 'Sasha'
 expdrink = 'Orange'   
@@ -44,7 +44,7 @@ class TestRunOrderTest():
 order = Order('Sasha', 'Orange')
 
 
-from classes import Preferences
+from core.classes import Preferences
 
 expname = 'Sarah'
 expecteddrinkpref = 'Lemonade'   
