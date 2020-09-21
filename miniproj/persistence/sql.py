@@ -52,10 +52,8 @@ def readperson():
 	cursor = connection.cursor()
 	cursor.execute("SELECT person_id, first_name, last_name, age FROM person;")
 	rows = cursor.fetchall()
-	#print (rows)
 	for row in rows:
 		peoplenamelist.append(str(row[1]))
-		#print("First name: " + row[1], "\n  Surname: " + row[2], "\n  Age: " + str(row[3]))
 	cursor.close()
 	connection.close()
  
@@ -73,6 +71,5 @@ def readdrink():
 	rows = cursor.fetchall()
 	for row in rows:
 		drinkslist.append(str(row[1]))
-	#	print("Drink name: ", row[1], "\n   Colour: " + row[2], "\n   Type: " + row[3])
 	cursor.close()
 	connection.close()

@@ -1,10 +1,8 @@
-import csv
 import os
-
 from core.logic import menu, drinkslist, peoplenamelist, orders, preflist
 from core.classes import Person, Drinks, Order, Preferences
 from core.utility import clear_screen
-from core.sqll import readperson, readdrink, writeperson, writedrink
+from persistence.sql import readperson, readdrink, writeperson, writedrink
 
 while True:
     clear_screen()
@@ -15,7 +13,7 @@ while True:
         writeperson()
         print('Your input has been added to the database. Thanks!')
         input("Hit enter to go back to the menu")
-        
+                
     elif ans == '2':
         readperson()
         print(peoplenamelist)
@@ -47,8 +45,10 @@ while True:
         input("Hit Enter to return to main menu.")
                 
     elif ans == '7':
+        readperson()
+        readdrink()
         for person in peoplenamelist:
-            print("Hi" +person)
+            print("Hi " +person)
             drinkpref = input(f"Out of the following drinks: {drinkslist}, which is your preference?")
             personpref = Preferences(person, drinkpref)
             preflist.append(personpref)
@@ -58,4 +58,4 @@ while True:
         exit()
         
     else:
-        print('Input not recognised')
+        input('Input not recognised. Please hit Enter try again.')

@@ -2,11 +2,12 @@
 import pytest
 from core.classes import Drinks
 
+
 expecteddrinkname = 'Fanta'
 expectedcolour = 'Orange'
 expectedtype = 'Fizzy'
 
-class TestRunDrinkTest():
+class TestRunDrinksTest():
      def test_drinks(self):
         assert expecteddrinkname == drink.drinkname
         assert expectedcolour == drink.colour
@@ -22,7 +23,7 @@ expectedfirstname = 'John'
 expectedsurname = 'Blah'
 expectedage = '23'     
 
-class TestRunPersonTest():
+class TestRunPersonsTest():
     def test_person(self):
         assert person.firstname == expectedfirstname
         assert person.surname == expectedsurname
@@ -36,7 +37,7 @@ from core.classes import Order
 expectedpersonname = 'Sasha'
 expdrink = 'Orange'   
 
-class TestRunOrderTest():
+class TestRunOrdersTest():
     def test_order(self):
         assert order.personname == expectedpersonname
         assert order.drink == expdrink
@@ -49,7 +50,7 @@ from core.classes import Preferences
 expname = 'Sarah'
 expecteddrinkpref = 'Lemonade'   
 
-class TestRunPrefTest():
+class TestRunPrefsTest():
     def test_pref(self):
         assert pref.name == expname
         assert pref.drink == expecteddrinkpref

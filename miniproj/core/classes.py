@@ -9,13 +9,6 @@ class Person:
         self.surname= surname
         self.age = age
         
- #   def addpeopletolist(self):
-        info = (self.firstname.title(), self.surname.title(), self.age.title())
-        peoplenamelist.append(info) 
-        
-    def __str__(self):
-      return f"Name: {self.firstname.title()}, Surname: {self.surname.title()}, Age: {self.age.title()}"
-  
     
 class Drinks:
     def __init__(self, drinkname, colour, typedrink):
@@ -39,7 +32,4 @@ class Order:
         self.personname = personname
         self.drink = drink
     def __repr__(self):
-        return f" Name: {self.personname.title()}, Order: {self.drink.title()}"
-    
-
-
+        return f" Name: {self.personname}, Order: {self.drink}"

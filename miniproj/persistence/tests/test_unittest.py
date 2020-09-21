@@ -1,5 +1,6 @@
 import unittest
 
+#testing drinks function:
 from core.classes import Drinks
 
 expecteddrinkname = 'Fanta'
@@ -12,16 +13,18 @@ class RunDrinkTest(unittest.TestCase):
         self.assertEqual(drink.colour, expectedcolour)
         self.assertEqual(drink.typedrink, expectedtype)
         
+        
 drink = Drinks('Fanta', 'Orange', 'Fizzy')
 if __name__ == '__main__':
     unittest.main()
-    
 
     
+#testing person funct:
 from core.classes import Person
 expectedfirstname = 'John'
 expectedsurname = 'Blah'
 expectedage = '23'     
+
 
 class RunPersonTest(unittest.TestCase):
     def test_person(self):
@@ -33,6 +36,8 @@ if __name__ == '__main__':
     unittest.main()
     
     
+    
+#testing order function:
     
 from core.classes import Order
 
@@ -49,6 +54,8 @@ order = Order('Sasha', 'Orange')
 if __name__ == '__main__':
     unittest.main()
 
+
+#testing pref function:
 
 from core.classes import Preferences
 
