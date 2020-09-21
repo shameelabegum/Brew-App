@@ -1,32 +1,13 @@
-import os
-import csv
 
 drinkslist = []
-peoplelist = []
+peoplenamelist = []
 orders = []
 preflist = []
 
-def clear_screen():
-    os.system("cls")
+import os
+from core.utility import clear_screen
+from persistence.sqll import readperson
     
-def readppl_csv(file_name):
-    with open(file_name) as file:
-        read_file = csv.reader(file, delimiter=',')
-        inlines = file.readlines()
-    for linep in inlines:
-        peoplelist.append(linep)
-        
-def readdrink_csv(file_name):
-    with open(file_name) as file:
-        read_file = csv.reader(file, delimiter=',')
-        inlines = file.readlines()
-    for linep in inlines:
-        drinkslist.append(linep)   
-            
-def writefiles_csv(file_name, inputt):
-    with open(file_name, "a") as file:
-        write_file = csv.writer
-        file.write(f"\n{inputt}") 
 def menu():
     clear_screen()
     menu_text = """

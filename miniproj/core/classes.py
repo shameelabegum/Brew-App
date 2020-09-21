@@ -1,6 +1,5 @@
 
-from core.logic import drinkslist 
-from core.logic import peoplelist
+from core.logic import drinkslist, peoplenamelist
 
 
 
@@ -10,9 +9,9 @@ class Person:
         self.surname= surname
         self.age = age
         
-    def addpeopletolist(self):
+ #   def addpeopletolist(self):
         info = (self.firstname.title(), self.surname.title(), self.age.title())
-        peoplelist.append(info) 
+        peoplenamelist.append(info) 
         
     def __str__(self):
       return f"Name: {self.firstname.title()}, Surname: {self.surname.title()}, Age: {self.age.title()}"
@@ -31,7 +30,7 @@ class Preferences:
     def __init__(self, name, drink):
         self.name = name
         self.drink = drink
-
+        
     def __repr__(self):
         return f"Name: {self.name.title()}, Preference: {self.drink.title()}"
     
